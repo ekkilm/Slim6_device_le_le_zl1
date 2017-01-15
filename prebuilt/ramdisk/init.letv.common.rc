@@ -1,0 +1,70 @@
+import init.letv.usb.rc
+on boot
+    chown system system /sys/class/leds/red/blink
+    chown system system /sys/class/leds/green/blink
+    chown system system /sys/class/leds/blue/blink
+    chown system system /sys/class/leds/red/ramp_step_ms
+    chown system system /sys/class/leds/green/ramp_step_ms
+    chown system system /sys/class/leds/blue/ramp_step_ms
+    chown system system /sys/class/leds/red/pause_lo
+    chown system system /sys/class/leds/green/pause_lo
+    chown system system /sys/class/leds/blue/pause_lo
+
+# factory nvm_service enable
+on property:sys.factory.nvm_service=enable
+   start factory_nvm
+
+service alipaycad /system/bin/alipaycad
+    class main
+    socket alipaycad stream 600 system system
+
+#boot start fidoca daemon
+service fidoca /system/vendor/bin/fidoca
+	class late_start
+	user system
+	group system
+
+service adctl /system/bin/ad_controller --enable-ad
+    user system
+    group system graphics
+    oneshot
+    disabled
+
+service factory_nvm /system/bin/nvm_service -factory
+    disabled
+    oneshot
+    user root
+    group root
+
+on property:sys.boot_completed=1
+    start adctl
+
+service yep_qmi_server /system/bin/yep_qmi_server
+    class core
+    user root
+#    seclabel u:r:yep_qmi_server:s0
+
+#service yep_diag /system/bin/yepdiag
+#    class core
+#    user root
+#    seclabel u:r:yepdiag:s0
+
+#service fetch_f3 /system/bin/fetch_f3
+#    class core
+#    user root
+#    seclabel u:r:fetch_f3:s0
+#    disabled
+
+service fossctl /system/bin/ppd foss:on
+    user system
+    group system graphics
+    oneshot
+    disabled
+
+on property:sys.boot_completed=1
+    start fossctl
+
+service ifaa_daemon /system/bin/ifaa_daemon
+    class main
+    socket ifaa_daemon stream 666 system system
+
