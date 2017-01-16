@@ -13,7 +13,7 @@
   	<project path="kernel/le/le_zl1" name="ekkilm/android_kernel_le_le_zl1" remote="github" revision="mm6.0" />
   	
   	<!-- Frameworks base -->
-  	<project path="frameworks/base" name="ekkilm/frameworks_base" remote="github" revision="mm6.0" />
+  	<project path="frameworks/base" name="ekkilm/Slim6_frameworks_base" remote="github" revision="mm6.0" />
   	
   	<!-- Curl needed -->
 	<project name="LineageOS/android_external_curl" path="external/curl" remote="github" revision="cm-13.0" />

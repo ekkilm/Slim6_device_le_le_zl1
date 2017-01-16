@@ -24,7 +24,7 @@ repo sync -j4
 
 Before build unzip radio files!
 
-device/le/le_zl1/radio.zip
+device/le/le_zl1/radio/radio.zip
 
 Build
 
