@@ -581,7 +581,7 @@ lib64/libFp_M.so
 lib64/libfpnav5118m.so
 
 # NFC firmware
-vendor/firmware/libpn548ad_fw.so
+#vendor/firmware/libpn548ad_fw.so
 
 # Sensors
 etc/sensors/hals.conf
@@ -642,7 +642,7 @@ etc/firmware/modem_pr/mcfg_sw_reliance.mbn
 #etc/firmware/modem_pr/mcfg_sw_sprint.mbn
 etc/firmware/modem_pr/mcfg_sw_tmo.mbn
 etc/firmware/modem_pr/mcfg_sw_verizon.mbn
-etc/firmware/nfc_test.bin
+#etc/firmware/nfc_test.bin
 etc/firmware/nvm_tlv_1.3.bin
 etc/firmware/nvm_tlv_2.1.bin
 etc/firmware/nvm_tlv_3.0.bin
