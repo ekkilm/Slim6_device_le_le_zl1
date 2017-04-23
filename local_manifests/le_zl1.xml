@@ -7,13 +7,13 @@
 	<remove-project name="SlimRoms/frameworks_base" />
 	
 	<!-- Device -->
-  	<project path="device/le/le_zl1" name="ekkilm/Slim6_device_le_le_zl1" remote="github" revision="mm6.0" />
+  	<project path="device/le/le_zl1" name="ekkilm/Slim_device_le_le_zl1" remote="github" revision="mm6.0" />
 
 	<!-- Kernel -->
   	<project path="kernel/le/le_zl1" name="ekkilm/android_kernel_le_le_zl1" remote="github" revision="mm6.0" />
   	
   	<!-- Frameworks base -->
-  	<project path="frameworks/base" name="ekkilm/Slim6_frameworks_base" remote="github" revision="mm6.0" />
+  	<project path="frameworks/base" name="ekkilm/Slim_frameworks_base" remote="github" revision="mm6.0" />
   	
   	<!-- Curl needed -->
 	<project name="LineageOS/android_external_curl" path="external/curl" remote="github" revision="cm-13.0" />

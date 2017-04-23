@@ -748,7 +748,6 @@ vendor/lib/libactuator_bu63165.so
 vendor/lib/libactuator_bu64297.so
 vendor/lib/libacdbmapper.so
 
-vendor/lib64/soundfx
 vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
